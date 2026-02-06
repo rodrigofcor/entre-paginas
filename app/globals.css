@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #ebddb8;
+  --color-paper: #f9f7f4;
 }
 
 html {

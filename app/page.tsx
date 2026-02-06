@@ -7,8 +7,8 @@ export default function HomePage() {
   )
 
   return (
-    <main className="mx-auto max-w-7xl px-6">
-      <section className="max-w-7xl mx-auto py-6">
+    <main>
+      <section className="px-6 py-6">
         <h2 className="text-3xl text-lime-900 font-light tracking-tight">
           Descubra sua próxima leitura
         </h2>
