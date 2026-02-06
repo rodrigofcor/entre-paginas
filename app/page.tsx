@@ -8,16 +8,16 @@ export default function HomePage() {
 
   return (
     <main className="mx-auto max-w-7xl px-6">
-      <section className="max-w-7xl mx-auto px-6 py-10">
-        <h2 className="text-3xl font-semibold tracking-tight">
+      <section className="max-w-7xl mx-auto py-6">
+        <h2 className="text-3xl text-lime-900 font-light tracking-tight">
           Descubra sua próxima leitura
         </h2>
-        <p className="mt-2 text-neutral-600 max-w-xl">
+        <p className="mt-2 text-neutral-600 max-w-7xl">
           Escolha um livro, reserve por quantos dias quiser e retire na loja.
         </p>
       </section>
       
-      <div className="space-y-10">
+      <div className="pt-6">
         {categories.map(category => (
           <CategorySection
             key={category}

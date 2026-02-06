@@ -8,8 +8,8 @@ interface Props {
 
 export function CategorySection({ title, books }: Props) {
   return (
-    <section className="space-y-3">
-      <h2 className="text-lg font-semibold">{title}</h2>
+    <section className="space-y-6">
+      <h2 className="text-3xl py-6 w-full text-center text-neutral-600 font-light tracking-tight">{title}</h2>
       <BookCarousel books={books} />
     </section>
   )
