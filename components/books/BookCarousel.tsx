@@ -1,3 +1,11 @@
+"use client"
+
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation } from "swiper/modules"
+
+import "swiper/css"
+import "swiper/css/navigation"
+
 import { Book } from "@/types/book"
 import { BookCard } from "./BookCard"
 
@@ -7,10 +15,18 @@ interface Props {
 
 export function BookCarousel({ books }: Props) {
   return (
-    <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+    <Swiper
+      modules={[Navigation]}
+      navigation
+      slidesPerView="auto"
+      spaceBetween={24}
+      grabCursor
+    >
       {books.map(book => (
-        <BookCard key={book.id} book={book} />
+        <SwiperSlide key={book.id} className="w-48!">
+          <BookCard book={book} />
+        </SwiperSlide>
       ))}
-    </div>
+    </Swiper>
   )
 }
