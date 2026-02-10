@@ -12,3 +12,13 @@ html {
 body {
   font-family: var(--font-inter), system-ui, sans-serif;
 }
+
+/* Esconde scrollbar mas mantém o scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE e Edge antigo */
+  scrollbar-width: none;    /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;            /* Chrome, Safari */
+}
