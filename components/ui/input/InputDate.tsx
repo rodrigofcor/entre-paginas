@@ -41,9 +41,16 @@ export function InputDate({
         {...props}
       />
       
-      {error && (
-        <span className="text-sm text-red-600 tracking-tight">{error}</span>
-      )}
+      <div className="min-h-6">
+        {error && (
+          <span
+            id={`${id}-error`}
+            className="text-sm text-red-600 tracking-tight"
+          >
+            {error}
+          </span>
+        )}
+      </div>
     </div>
   )
 }

@@ -34,7 +34,21 @@ export function BookCarousel({ books }: Props) {
     const el = containerRef.current
     if (!el) return
 
-    const scrollAmount = el.clientWidth
+    const firstCard = el.firstElementChild as HTMLElement
+    if (!firstCard) return
+
+    const cardWidth = firstCard.getBoundingClientRect().width
+
+    const styles = getComputedStyle(el)
+    const gap = parseFloat(styles.columnGap || styles.gap || "0")
+
+    const fullCardWidth = cardWidth + gap
+
+    const visibleWidth = el.clientWidth
+
+    const cardsPerView = Math.floor(visibleWidth / fullCardWidth)
+
+    const scrollAmount = fullCardWidth * (cardsPerView - 1)
 
     el.scrollBy({
       left: direction === "right" ? scrollAmount : -scrollAmount,
